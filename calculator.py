@@ -8,6 +8,8 @@ def multiply(x, y):
     return x * y
 
 def division(x, y):
+    if y == 0:
+        return "Error! Division by zero."
     return x / y
 
 
@@ -39,7 +41,7 @@ while True:
             print(num1, "/", num2, "=", division(num1, num2))
 
         next_calulation = input("Want to do another calculation? (yes/no): ")
-        if next_calulation == "no":
+        if next_calulation != "yes":
            break
 
     else:
